@@ -2,49 +2,56 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   background: #f2f2f2;
+  padding: 1rem; /* add some padding for small screens */
+  box-sizing: border-box;
 }
 
 .login-form {
   background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-  width: 300px;
+  padding: 1.875rem; /* 30px */
+  border-radius: 0.75rem; /* 12px */
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1); /* 4px 10px */
+  width: 18.75rem; /* 300px */
+  max-width: 100%; /* make responsive on small screens */
+  box-sizing: border-box;
 }
 
 .login-form h2 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem; /* 20px */
+  font-size: 1.5rem;
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem; /* 15px */
   display: flex;
   flex-direction: column;
 }
 
 .form-group label {
-  margin-bottom: 5px;
-  font-size: 14px;
+  margin-bottom: 0.3125rem; /* 5px */
+  font-size: 0.875rem; /* 14px */
 }
 
 .form-group input {
-  padding: 10px;
+  padding: 0.625rem; /* 10px */
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 0.5rem; /* 8px */
+  font-size: 1rem;
 }
 
 .btn {
   width: 100%;
-  padding: 10px;
+  padding: 0.625rem; /* 10px */
   background: #28a745;
   border: none;
   color: white;
-  border-radius: 8px;
-  font-size: 16px;
+  border-radius: 0.5rem; /* 8px */
+  font-size: 1rem; /* 16px */
   cursor: pointer;
+  transition: background 0.3s;
 }
 
 .btn:hover {
@@ -53,7 +60,46 @@
 
 .error {
   color: red;
-  font-size: 14px;
+  font-size: 0.875rem; /* 14px */
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem; /* 10px */
+}
+
+/* Responsive Design */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .login-form {
+    width: 20rem; /* slightly wider for tablets */
+    padding: 2rem;
+  }
+
+  .login-form h2 {
+    font-size: 1.375rem;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+  .login-form {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .login-form h2 {
+    font-size: 1.25rem;
+  }
+
+  .form-group input {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    font-size: 0.95rem;
+    padding: 0.5rem;
+  }
+
+  .error {
+    font-size: 0.8rem;
+  }
 }

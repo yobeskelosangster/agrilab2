@@ -5,6 +5,7 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  max-height: 20rem; /* prevent too large on big screens */
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -20,19 +21,49 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(1rem + 2vmin); /* scaled font size */
   color: white;
+  padding: 1rem; /* padding for small screens */
+  box-sizing: border-box;
 }
 
 .App-link {
   color: #61dafb;
+  word-break: break-word;
 }
 
+/* Keyframes */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .App-logo {
+    height: 30vmin;
+    max-height: 15rem;
+  }
+
+  .App-header {
+    font-size: calc(0.9rem + 2vmin);
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+  .App-logo {
+    height: 25vmin;
+    max-height: 12rem;
+  }
+
+  .App-header {
+    font-size: calc(0.8rem + 2vmin);
   }
 }

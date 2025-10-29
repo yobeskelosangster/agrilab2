@@ -10,25 +10,25 @@
   background: linear-gradient(135deg, #2e8b57, #8bc34a);
   color: white;
   text-align: center;
-  padding: 80px 20px;
+  padding: 5rem 1.25rem; /* 80px 20px */
 }
 
 .about-hero h1 {
   font-size: 3rem;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
 }
 
 .about-hero p {
   font-size: 1.2rem;
-  max-width: 700px;
+  max-width: 44rem; /* 700px */
   margin: 0 auto;
   line-height: 1.6;
 }
 
 /* Section layout */
 .about-section {
-  padding: 60px 20px;
-  max-width: 1100px;
+  padding: 3.75rem 1.25rem; /* 60px 20px */
+  max-width: 68.75rem; /* 1100px */
   margin: 0 auto;
 }
 
@@ -37,18 +37,18 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 40px;
+  gap: 2.5rem; /* 40px */
 }
 
 .about-text {
   flex: 1;
-  min-width: 300px;
+  min-width: 18.75rem; /* 300px */
 }
 
 .about-text h2 {
   font-size: 2rem;
   color: #2e8b57;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
 }
 
 .about-text p {
@@ -58,13 +58,13 @@
 
 .about-image {
   flex: 1;
-  min-width: 300px;
+  min-width: 18.75rem; /* 300px */
 }
 
 .about-image img {
   width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0.9375rem; /* 15px */
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1); /* 4px 10px */
 }
 
 /* Mission & Vision */
@@ -72,34 +72,35 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 40px;
+  gap: 2.5rem; /* 40px */
 }
 
 .mission,
 .vision {
   flex: 1;
-  min-width: 300px;
+  min-width: 18.75rem; /* 300px */
   background-color: white;
-  padding: 30px;
-  border-left: 5px solid #2e8b57;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  padding: 1.875rem; /* 30px */
+  border-left: 0.3125rem solid #2e8b57; /* 5px */
+  border-radius: 0.625rem; /* 10px */
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05); /* 4px 8px */
 }
 
 .mission h3,
 .vision h3 {
   color: #2e8b57;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem; /* 10px */
 }
 
 /* Team section */
 .team {
   text-align: center;
+  padding: 2.5rem 1.25rem; /* add some padding */
 }
 
 .team h2 {
   color: #2e8b57;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem; /* 40px */
   font-size: 2.2rem;
 }
 
@@ -107,34 +108,34 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 1.875rem; /* 30px */
 }
 
 .team-card {
   background-color: white;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 260px;
-  padding: 20px;
+  border-radius: 0.9375rem; /* 15px */
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1); /* 4px 12px */
+  width: 16.25rem; /* 260px */
+  padding: 1.25rem; /* 20px */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .team-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  transform: translateY(-0.5rem); /* -8px */
+  box-shadow: 0 0.5rem 1.125rem rgba(0, 0, 0, 0.15); /* 8px 18px */
 }
 
 .team-card img {
-  width: 100px;
-  height: 100px;
+  width: 6.25rem; /* 100px */
+  height: 6.25rem;
   object-fit: cover;
   border-radius: 50%;
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem; /* 15px */
 }
 
 .team-card h3 {
   color: #333;
-  margin-bottom: 5px;
+  margin-bottom: 0.3125rem; /* 5px */
 }
 
 .team-card p {
@@ -143,12 +144,77 @@
 }
 
 /* Responsive design */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .about-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-hero p {
+    font-size: 1.1rem;
+  }
+
+  .team h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Small tablets & large phones */
 @media (max-width: 768px) {
   .about-hero h1 {
     font-size: 2.2rem;
   }
 
+  .about-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
   .mission-vision {
     flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .team-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .about-hero {
+    padding: 3rem 1rem;
+  }
+
+  .about-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-hero p {
+    font-size: 1rem;
+  }
+
+  .about-section {
+    padding: 2rem 1rem;
+  }
+
+  .about-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .team h2 {
+    font-size: 1.5rem;
+  }
+
+  .team-card {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .team-card img {
+    width: 5rem;
+    height: 5rem;
   }
 }

@@ -1,26 +1,59 @@
-.item{
-    width: 350px;
+.item {
+    width: 90%;              /* Use percentage instead of fixed px */
+    max-width: 350px;        /* Limit max width for large screens */
+    margin: 0 auto;          /* Center on smaller screens */
+    box-sizing: border-box;
 }
-.item p{
-    margin: 6px 0px;
+
+.item p {
+    margin: 6px 0;
+    font-size: 1rem;         /* Responsive font size */
 }
-.itemprice{
+
+.itemprice {
     display: flex;
-    gap: 20px;
+    gap: 1rem;               /* Use rem instead of px for better scaling */
+    flex-wrap: wrap;          /* Wrap on smaller screens */
 }
-.itempricenew{
+
+.itempricenew {
     color: #374151;
-    font-size: 18px;
+    font-size: 1.125rem;     /* 18px ≈ 1.125rem */
     font-weight: 600;
 }
-.itempriceold{
+
+.itempriceold {
     color: #8c8c8c;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 500;
     text-decoration: line-through;
-
 }
-.item:hover{
+
+.item {
+    transition: transform 0.3s ease;
+}
+
+.item:hover {
     transform: scale(1.05);
-    transition: 06s;
+}
+
+/* Responsive adjustments for smaller devices */
+@media (max-width: 768px) {
+    .itemprice {
+        gap: 0.5rem;
+    }
+    .itempricenew,
+    .itempriceold {
+        font-size: 1rem;   /* Slightly smaller text on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .item {
+        width: 100%;        /* Full width on mobile */
+    }
+    .itempricenew,
+    .itempriceold {
+        font-size: 0.95rem; /* Smaller text on phones */
+    }
 }
