@@ -1,60 +1,21 @@
-.hero {
-  position: relative;
-  width: 100%;
-  height: 90vh;
-  overflow: hidden;
-}
-
-.hero-bg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(60%);
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  padding: 1rem;
-}
-
-.hero-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  letter-spacing: 2px;
-}
-
-.hero-sub {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-
 /* 🌟 Search Bar Styling */
 .hero-search {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70%;
+  width: 90%;           /* let it take more width on smaller screens */
   max-width: 700px;
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
   border-radius: 9999px;
   padding: 0.5rem;
   border: 1px solid rgba(255, 255, 255, 0.4);
+  flex-wrap: wrap;      /* allow input and button to wrap on small screens */
+  gap: 0.5rem;          /* spacing between input and button when wrapped */
 }
 
 .hero-input {
-  flex: 1;
+  flex: 1 1 200px;      /* flexible width with minimum 200px */
   padding: 1rem 1.5rem;
   font-size: 1.1rem;
   color: #333;
@@ -62,9 +23,11 @@
   border-radius: 9999px;
   outline: none;
   background-color: white;
+  min-width: 0;          /* allows shrinking inside flex container */
 }
 
 .hero-btn {
+  flex: 0 0 auto;       /* do not stretch, stay natural width */
   padding: 1rem 2rem;
   background-color: #4caf50;
   border: none;
@@ -74,6 +37,7 @@
   border-radius: 9999px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  white-space: nowrap;   /* prevent button text from wrapping */
 }
 
 .hero-btn:hover {
@@ -85,11 +49,50 @@
   .hero-title {
     font-size: 2rem;
   }
+
+  .hero-sub {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-search {
+    width: 95%;
+    flex-direction: column;  /* stack input and button vertically */
+    padding: 0.5rem;
+  }
+
   .hero-input {
+    width: 100%;
+    padding: 0.8rem 1rem;
     font-size: 1rem;
   }
+
   .hero-btn {
-    padding: 0.8rem 1.5rem;
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.8rem;
     font-size: 1rem;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  .hero-sub {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-input {
+    font-size: 0.95rem;
+    padding: 0.7rem 1rem;
+  }
+
+  .hero-btn {
+    font-size: 0.95rem;
+    padding: 0.7rem;
   }
 }
