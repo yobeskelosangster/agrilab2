@@ -62,7 +62,6 @@
   border-radius: 9999px;
   outline: none;
   background-color: white;
-  min-width: 0;
 }
 
 .hero-btn {
@@ -81,41 +80,16 @@
   background-color: #43a047;
 }
 
-/* 🌍 Responsive adjustments */
-@media (max-width: 900px) {
+/* Responsive */
+@media (max-width: 768px) {
   .hero-title {
     font-size: 2rem;
   }
-  .hero-sub {
-    font-size: 1.1rem;
-  }
-  .hero-search {
-    width: 85%;
-  }
-}
-
-@media (max-width: 600px) {
-  .hero-search {
-    flex-direction: column;
-    gap: 0.6rem;
-    border-radius: 20px;
-    padding: 0.8rem;
-    width: 90%;
-  }
   .hero-input {
-    width: 100%;
-    padding: 0.8rem 1rem;
     font-size: 1rem;
   }
   .hero-btn {
-    width: 100%;
-    padding: 0.9rem;
+    padding: 0.8rem 1.5rem;
     font-size: 1rem;
-  }
-  .hero-title {
-    font-size: 1.6rem;
-  }
-  .hero-sub {
-    font-size: 0.95rem;
   }
 }
